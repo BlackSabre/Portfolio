@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Pixelify+Sans:wght@400..700&family=Sixtyfour&display=swap");
+
+.sixtyfour-font {
+  /* <uniquifier>: Use a unique and descriptive class name */
+  font-family: "Sixtyfour", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "BLED" 0, "SCAN" 0;
+}
+
+.chakra-petch-light {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 300; /* 300 - 700 */
+  font-style: normal;
+  font-size: 32px;
+}
+
+/* CSS RESET */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* || *_____ VARIABLES _____* */
+
+  /* || _____ FONT _____ */
+  --text-font-family: "Sixtyfour", sans-serif;
+  --text-shadow: 0px 0px 5px var(--text-colour);
+
+  /* || _____ COLOURS _____ */
+
+  --background-image: radial-gradient(rgb(0, 48, 0), black);
+  --text-colour: rgb(60, 182, 60);
+  --main-border-colour: rgb(60, 60, 60);
+  --nav-border-colour: darkgreen;
+  --nav-box-shadow-colour: darkgreen;
+
+  /* || ___ BUTTON COLOURS ___  */
+  --button-text-hover-colour: rgb(147, 255, 147);
+  --button-text-hover-shadow: 0px 0px 9px var(--button-text-hover-colour);
+  --button-bg-green-colour: rgb(0, 66, 0);
+  --button-bg-black-colour: black;
+  --button-border-colour: rgb(0, 66, 0);
+  --button-hover-border-colour: green;
+  --button-box-shadow-colour: rgb(0, 66, 0);
+
+  /* || _____ BORDERS ______ */
+  --nav-border-top: 1;
+
+  /* || _____ SIZES ______ */
+  --button-text-font-size: clamp(
+    0.75rem,
+    0.833vw + 0.583rem,
+    1.2rem
+  ); /* 12px - 20px */
+
+  --p-text-font-size: clamp(
+    1rem,
+    1.617vw + 0.582rem,
+    1.875rem
+  ); /* 16px - 30px */
+
+  --h1-text-font-size: clamp(
+    1.25rem,
+    1.848vw + 0.772rem,
+    2.25rem
+  ); /* 20px-36px */
+
+  --nav-item-flex: 0 1 14rem;
+  --max-button-width: 17rem;
+}
+
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--text-font-family);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "BLED" 0, "SCAN" 0;
+  color: var(--text-colour);
+  text-shadow: var(--text-shadow);
+  text-align: center;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+}
+
+body {
+  background-image: var(--background-image);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+  border: 2rem inset var(--main-border-colour);
+  border-radius: 1%;
+  overflow-x: hidden;
+  padding-top: 10px;
+}
+
+h1 {
+  padding: 0.2em;
+  font-size: var(--h1-text-font-size);
+}
+
+p {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 300; /* 300 - 700 */
+  font-style: normal;
+  font-size: var(--p-text-font-size);
+  padding: 0.5em;
+}
+
+.nav-ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  width: 100%;
+
+  border-top: 3px double var(--nav-border-colour);
+  border-bottom: 3px double var(--nav-border-colour);
+  box-shadow: 0px -8px 8px -7px var(--nav-box-shadow-colour),
+    0px 8px 8px -7px var(--nav-box-shadow-colour);
+
+  gap: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px 0px 5px 0px;
+}
+
+.nav-item {
+  flex: var(--nav-item-flex);
+  max-width: var(--max-button-width);
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.left-nav-icon {
+  font-size: 4rem;
+  max-width: 4rem;
+  align-content: center;
+}
+
+.right-nav-icon {
+  font-size: 4rem;
+  max-width: 4rem;
+  align-content: center;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* background-color: pink; */
+}
+
+.nav-button {
+  /* TEXT */
+  font-family: var(--text-font-family);
+  font-size: var(--button-text-font-size);
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "BLED" 0, "SCAN" 0;
+  color: var(--text-colour);
+  text-shadow: var(--text-shadow);
+  text-align: center;
+
+  width: 100%;
+  padding: 0.5rem;
+  background: linear-gradient(
+    0deg,
+    var(--button-bg-black-colour),
+    var(--button-bg-green-colour),
+    var(--button-bg-black-colour),
+    var(--button-bg-green-colour)
+  );
+  background-size: 300% 300%;
+  background-position: 100% 100%;
+  background-repeat: repeat;
+
+  border: 4px double var(--button-border-colour);
+  box-shadow: 0px 0px 10px var(--button-box-shadow-colour);
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.nav-button:hover:before {
+  content: "> ";
+  left: -20px;
+}
+
+.nav-button:hover {
+  animation: nav-button-hover-anim 1.3s linear infinite;
+  color: var(--button-text-hover-colour);
+  text-shadow: var(--button-text-hover-shadow);
+  border: 4px double var(--button-text-hover-colour);
+}
+
+.nav-button--selected::before {
+  content: "> ";
+}
+
+@keyframes nav-button-hover-anim {
+  0% {
+    background-position: 100% 97%;
+  }
+  100% {
+    background-position: 100% 3%;
+  }
+}
