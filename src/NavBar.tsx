@@ -6,7 +6,6 @@ const NavBar = () => {
       <img
         className="test-image"
         alt="site-logo-code-chef"
-        src={FunnyManImage}
         width={300}
         height={271}
       />

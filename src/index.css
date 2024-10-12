@@ -121,7 +121,9 @@ p {
   font-weight: 300; /* 300 - 700 */
   font-style: normal;
   font-size: var(--p-text-font-size);
-  padding: 0.5em;
+  padding: 15px;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
 }
 
 .nav-ul {
