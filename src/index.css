@@ -24,6 +24,13 @@
   box-sizing: border-box;
 }
 
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
 :root {
   /* || *_____ VARIABLES _____* */
 
@@ -173,7 +180,8 @@ nav {
   /* background-color: pink; */
 }
 
-.nav-button {
+.nav-button,
+.nav-button--selected {
   /* TEXT */
   font-family: var(--text-font-family);
   font-size: var(--button-text-font-size);

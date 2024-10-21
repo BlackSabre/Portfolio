@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import FunnyManImage from "../assets/img/funny-man.png";
 
 const NavBar = () => {
@@ -6,6 +7,7 @@ const NavBar = () => {
       <img
         className="test-image"
         alt="site-logo-code-chef"
+        src={FunnyManImage}
         width={300}
         height={271}
       />
@@ -14,16 +16,44 @@ const NavBar = () => {
           <div className="left-nav-icon">|</div>
           <ul className="nav-ul">
             <li className="nav-item">
-              <button className="nav-button nav-button--selected">About</button>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-button nav-button--selected" : "nav-button"
+                }
+                to="/"
+              >
+                About
+              </NavLink>
             </li>
             <li className="nav-item">
-              <button className="nav-button">Projects</button>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-button nav-button--selected" : "nav-button"
+                }
+                to="/projects"
+              >
+                Projects
+              </NavLink>
             </li>
             <li className="nav-item">
-              <button className="nav-button">Contact</button>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-button nav-button--selected" : "nav-button"
+                }
+                to="/contact"
+              >
+                Contact
+              </NavLink>
             </li>
             <li className="nav-item">
-              <button className="nav-button">Images</button>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-button nav-button--selected" : "nav-button"
+                }
+                to="/images"
+              >
+                Images
+              </NavLink>
             </li>
           </ul>
           <div className="right-nav-icon">|</div>
